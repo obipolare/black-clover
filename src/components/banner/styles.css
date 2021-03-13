@@ -1,0 +1,123 @@
+@font-face {
+  font-family: Kanitbold;
+  src: url("../../assets/fonts/Kanit-bold.ttf");
+}
+@font-face {
+  font-family: KanitRegular;
+  src: url("../../assets/fonts/Kanit-regular.ttf");
+}
+.grid-container {
+  display: grid;
+  grid-template-rows: auto auto 65px;
+  grid-template-columns: 50% 50%;
+  padding: 50px;
+  background-color: #22303a;
+  color: white;
+  font-size: 17px;
+  font-family: "Mukta", sans-serif;
+}
+.article {
+  /* border: 1px solid black; */
+  padding: 5px 20px 5px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.article__img {
+  width: 100%;
+  align-self: center;
+}
+.article__h1 {
+  font-size: 1.4em;
+  font-family: Kanitbold;
+}
+.article__p {
+  font-size: 2em;
+  font-family: KanitRegular;
+}
+.article__p2 {
+  line-height: 21px;
+  font-size: 1.05em;
+}
+.article:nth-child(1) {
+  align-self: flex-end;
+}
+.article:nth-child(2) {
+  font-family: KanitRegular;
+}
+.article:nth-child(4) {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 3;
+  padding: 0;
+  margin: 5px auto;
+  max-width: 600px;
+}
+.article:nth-child(3) {
+  flex-direction: row;
+  justify-content: start;
+  display: flex;
+}
+.button {
+  margin: 0 5px;
+  cursor: pointer;
+  font-family: Kanitbold;
+  font-size: 1em;
+  border-radius: 5px;
+  padding: 0px 20px;
+  border: none;
+}
+.button-left {
+  background-color: #9b7a56;
+}
+.button-right {
+  background-color: #22303a;
+  border: 1px solid #9b7a56;
+}
+.button-right:hover {
+  background: #9b7a56;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 805px) {
+  .grid-container {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+    padding: 26px;
+  }
+
+  .article,
+  .button {
+    align-items: center;
+    padding: 10px;
+  }
+  .article:nth-child(3) {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    justify-content: center;
+  }
+  .article:nth-child(4) {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+  }
+  .article__p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 535px) {
+  .grid-container {
+    padding: 14px;
+  }
+  .article__h1 {
+    text-align: center;
+    font-size: 1.8em;
+  }
+  .article__p {
+    font-size: 1.3em;
+  }
+  .article {
+    font-size: 1em;
+  }
+}

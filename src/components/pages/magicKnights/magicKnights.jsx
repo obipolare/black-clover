@@ -1,0 +1,14 @@
+import React from 'react'
+
+const magicKnights = () => {
+    return (
+        <main>
+            <section>
+                <h3>this is a page of Magic Knights!!</h3>
+                <p>Howdy Dude!</p>
+            </section>
+        </main>
+    )
+}
+
+export default magicKnights
