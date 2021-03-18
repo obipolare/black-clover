@@ -9,12 +9,12 @@ const imgcharacter2 =
 
 const home = () => {
   return (
-    <main>
+    <>
       <Banner />
       <section className="bg-gray-900 w-full h-screen text-white flex justify-center items-center">
         <article className="text-4xl text-center">
           <h2> Pronto voy a completar el Website...ya lo veréis</h2>
-          <h2>Soon Imma complete this website :)</h2>
+          <h2>Soon Imma complete this website :</h2>
           <a
             target="_blank"
             href="https://twitter.com/obipolare"
@@ -24,7 +24,7 @@ const home = () => {
           </a>
         </article>
       </section>
-    </main>
+    </>
   );
 };
 
