@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Banner from "../../banner/Banner.jsx";
-
+import Banner from "../../banner/Banner";
 import "./styles.css";
 
 const Home = () => {

@@ -1,39 +1,40 @@
-import styled from "styled-components";
-import Kanit from "../../assets/fonts/Kanit-bold.ttf";
-import Kanitalic from "../../assets/fonts/Kanit-regular.ttf";
+import React from "react";
+import "../../styles/styles.css";
+import { Link } from "react-router-dom";
+import "./styles.css";
+const Banner = () => (
+  <section className="grid-container">
+    <article className="article">
+      <h1 className="article__h1">Black Clover</h1>
+      <p className="article__p">¿Qué personajes buscas?</p>
+    </article>
+    <article className="article">
+      <p className="article__p2">
+        Esta pagina te ayudara a conocer tus personajes favoritos de Black
+        Clover , ademas te entaras de las Curiosidades que no sabias de este
+        maravilloso Anime
+      </p>
+    </article>
+    <div className="buttons-banner">
+      <button className="button-banner button-banner--left">
+        <Link to="/characters" className="link">
+          personajes
+        </Link>
+      </button>
+      <button className="button-banner button-banner--right">
+        <Link to="/characters" className="link">
+          Secretos
+        </Link>
+      </button>
+    </div>
+    <figure className="article">
+      <img
+        className="article__img"
+        src="https://www.funimation.com/blog/wp-content/uploads/2020/04/Black_Clover_Zoom_Background_5.jpg"
+        alt=""
+      />
+    </figure>
+  </section>
+);
 
-export const Containerbanner = styled.section`
-  @font-face {
-    font-family: Kanitbold;
-    font-style: bold;
-    src: url(${Kanit});
-  }
-  display: grid;
-  grid-template-rows: auto auto 50px;
-  grid-template-columns: 50% 50%;
-  padding: 50px;
-  font-family: Kanitalic;
-  background-color: #22303a;
-  color: white;
-  font-size: 17px;
-  @media (max-width: 805px) {
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: 1fr;
-    padding: 26px;
-  }
-`;
-
-export const Article = styled.article`
-  padding: 5px 20px 5px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @media (max-width: 805px) {
-    align-items: center;
-    padding: 10px;
-  }
-`;
-export const BannerImage = styled.img`
-  width: 100%;
-  align-self: center;
-`;
+export default Banner;
