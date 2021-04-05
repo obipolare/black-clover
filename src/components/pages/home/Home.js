@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Banner from "../../banner/Banner.jsx";
+
 import "./styles.css";
-// import Cardcharacter from "../../cardCharacter/CardCharacter";
 
 const Home = () => {
   const [slider, setSlider] = useState([
