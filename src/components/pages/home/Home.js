@@ -22,7 +22,7 @@ const Home = () => {
     },
   ]);
   return (
-    <div>
+    <>
       <Banner />
       <section class="slider">
         <scroll-container class="slider-container">
@@ -48,7 +48,7 @@ const Home = () => {
           })}
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
