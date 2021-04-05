@@ -15,18 +15,18 @@ const Banner = () => (
         maravilloso Anime
       </p>
     </article>
-    <article className="article">
-      <button className="button button-left">
+    <div className="buttons-banner">
+      <button className="button-banner button-banner--left">
         <Link to="/characters" className="link">
           personajes
         </Link>
       </button>
-      <button className="button button-right">
+      <button className="button-banner button-banner--right">
         <Link to="/characters" className="link">
           Secretos
         </Link>
       </button>
-    </article>
+    </div>
     <figure className="article">
       <img
         className="article__img"

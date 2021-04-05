@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Containercharacters from "../../templates/charactersContainer/characterscontainer.jsx";
+import CharactersContainer from "../../templates/charactersContainer/CharactersContainer";
 
 const Characters = () => {
   const [characters, setCharacters] = useState({
@@ -19,6 +19,6 @@ const Characters = () => {
   useEffect(() => {
     charactersData(url);
   }, [url]);
-  return <Containercharacters characters={characters} />;
+  return <CharactersContainer characters={characters} />;
 };
 export default Characters;

@@ -1,13 +1,15 @@
 import React from "react";
-import CardCharacter from "../../cardCharacter/cardCharacter.jsx";
+import "./styles.css";
+import { CardCharacter } from "../../cardCharacter/CardCharacter";
 import loadingSVG from "../../../assets/loading.svg";
-const Characterscontainer = React.memo(({ characters }) => {
+const CharactersContainer = React.memo(({ characters }) => {
   const { data, loading } = characters;
   console.log(data, loading);
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto w-11/12 mt-10">
+    <section className="grid w-11/12 grid-cols-1 gap-4 py-12 mx-auto mt-10 sm:grid-cols-2 xl:grid-cols-3">
+      {/* // <section className="mt-12 pinterest-container"> */}
       {loading ? (
-        <figure className="col-span-3 flex justify-center w-full items-center h-screen">
+        <figure className="flex items-center justify-center w-full h-screen col-span-3">
           <img className="w-24" src={loadingSVG} />
         </figure>
       ) : (
@@ -27,4 +29,4 @@ const Characterscontainer = React.memo(({ characters }) => {
   );
 });
 
-export default Characterscontainer;
+export default CharactersContainer;

@@ -1,0 +1,9 @@
+.pinterest-container {
+  column-count: 3;
+  column-width: 200px;
+  column-gap: 40px;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
