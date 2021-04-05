@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Banner from "../../banner/Banner";
+import Banner from "../../../components/banner/Banner";
 import "./styles.css";
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
     },
   ]);
   return (
-    <>
+    <div>
       <Banner />
       <section class="slider">
         <scroll-container class="slider-container">
@@ -48,7 +48,7 @@ const Home = () => {
           })}
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
