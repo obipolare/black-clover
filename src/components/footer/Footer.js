@@ -34,7 +34,7 @@ const Footer = () => {
     },
   ]);
   return (
-    <footer className="grid grid-cols-1 gap-4 px-4 py-6 bg-gray-100 sm:grid-cols-3 sm:px-12 lg:px-28 ">
+    <footer className="grid grid-cols-1 gap-4 px-4 py-6 transition duration-200 bg-gray-100 dark:bg-dark-footer sm:grid-cols-3 sm:px-12 lg:px-28 dark:text-white">
       <div>
         <p className="text-2xl font-semibold">Obipolare 2021</p>
         <ul className="py-4">

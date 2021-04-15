@@ -12,7 +12,7 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <main className="mt-12 sm:mt-16 lg:mt-16 bg-gray-50">
+      <main className="mt-12 duration-200 sm:mt-16 lg:mt-16 bg-gray-50 dark:bg-dark-main transtion dark:text-white">
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/characters" exact component={Characters} />
