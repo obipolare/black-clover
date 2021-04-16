@@ -22,7 +22,7 @@ export const CardCharacter = ({ id, name, img, birthdate, description }) => {
     //   </div>
     // </div>
 
-    <article className="flex flex-col mx-auto overflow-hidden bg-white rounded-lg shadow-lg w-60 md:w-80 dark:bg-gray-800">
+    <article className="flex flex-col mx-auto overflow-hidden bg-white rounded-lg shadow-lg w-72 md:w-80 dark:bg-gray-800">
       <figure className="w-full overflow-hidden h-60 ">
         <img alt={name} src={img} className="object-cover " />
       </figure>
