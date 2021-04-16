@@ -7,14 +7,14 @@ import asta from "../../assets/asta-banner.jpg";
 import "./styles.css";
 import { useState, useEffect } from "react";
 const Banner = () => {
-  // const [pictures, setPictures] = useState([liebe, asta]);
-  // let indexArray = 0;
+  // const [pictures, setPictures] = useState([liebe,asta]);
+  // const [indexArray, setIndexArray] = useState(0);
   // const changePicture = () => {
-  //   document.bannerSlider.src = pictures[indexArray];
-  //   indexArray < 1 ? indexArray++ : (indexArray = 0);
+  //   if (indexArray < pictures.length - 1) setIndexArray(indexArray + 1);
+  //   else setIndexArray(0);
   // };
   // useEffect(() => {
-  //   setInterval(changePicture, 5000);
+  //   setInterval(changePicture, 10000);
   // }, [pictures]);
   return (
     <section className="duration-200 grid-container bg-light-gray dark:bg-dark-banner dark:text-white transtision">
@@ -41,11 +41,11 @@ const Banner = () => {
           </Link>
         </button>
       </div>
-      <figure className="article">
+      <figure className=" article">
         <img
           name="bannerSlider"
           src={liebe}
-          className="article__img"
+          className=" article__img"
           alt="Liebe"
         />
       </figure>

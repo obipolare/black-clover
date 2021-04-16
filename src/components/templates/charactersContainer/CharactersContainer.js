@@ -1,7 +1,8 @@
 import React from "react";
 import "./styles.css";
-import { CardCharacter } from "../../cardCharacter/CardCharacter";
+
 import loadingSVG from "../../../assets/loading.svg";
+import { CardCharacter } from "../../organisms/cardCharacter/CardCharacter";
 const CharactersContainer = React.memo(({ characters }) => {
   const { data, loading } = characters;
   console.log(data, loading);
