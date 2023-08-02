@@ -26,10 +26,14 @@ export default function Home() {
           </article>
           <div className="flex gap-4">
             <Link href="/characters">
-              <Button color="primary">Personajes</Button>
+              <Button color="primary" size="lg">
+                Personajes
+              </Button>
             </Link>
             <Link href="/characters">
-              <Button color="primary">Secretos</Button>
+              <Button color="primary" size="lg">
+                Secretos
+              </Button>
             </Link>
           </div>
         </div>

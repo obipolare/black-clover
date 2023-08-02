@@ -23,7 +23,7 @@ export const CardCharacter = ({
           alt="Card background"
           className="object-cover rounded-xl"
           src={img}
-          width={270}
+          width="100%"
         />
       </CardHeader>
       <CardBody className="overflow-visible py-2">
