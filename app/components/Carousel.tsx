@@ -9,6 +9,7 @@ import {
   Slider,
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import { Button } from '@nextui-org/react';
 
 export const Carousel = () => {
   const videos = [
@@ -32,7 +33,7 @@ export const Carousel = () => {
   return (
     <CarouselProvider
       naturalSlideWidth={100}
-      naturalSlideHeight={63}
+      naturalSlideHeight={60}
       totalSlides={4}
     >
       <Slider>
@@ -41,12 +42,16 @@ export const Carousel = () => {
         ))}
       </Slider>
       <div className="flex flex-row gap-4 justify-center">
-        <ButtonBack>
-          <LeftIcon />
-        </ButtonBack>
-        <ButtonNext>
-          <RightIcon />
-        </ButtonNext>
+        <Button isIconOnly>
+          <ButtonBack>
+            <LeftIcon />
+          </ButtonBack>
+        </Button>
+        <Button isIconOnly>
+          <ButtonNext>
+            <RightIcon />
+          </ButtonNext>
+        </Button>
       </div>
     </CarouselProvider>
   );
