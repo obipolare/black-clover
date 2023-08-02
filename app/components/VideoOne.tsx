@@ -8,10 +8,10 @@ type Props = {
 export const VideoOne = ({ slider }: Props) => {
   const { id, src } = slider;
   return (
-    <div id={id} style={{ width: 1000, height: 480, background: '#ff80ed' }}>
+    <div>
       <iframe
-        width="1000"
-        height="480"
+        width="100%"
+        height={480}
         // className="aspect-video"
         src={`https://www.youtube.com/embed/${src}`}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

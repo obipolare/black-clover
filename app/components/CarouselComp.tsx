@@ -2,6 +2,8 @@
 import { Carousel } from '@trendyol-js/react-carousel';
 import { VideoOne } from './VideoOne';
 import { useState } from 'react';
+import LeftIcon from './LeftIcon';
+import RightIcon from './RightIcon';
 
 export const CarouselComp = () => {
   const [videos, setVideos] = useState([
@@ -11,7 +13,7 @@ export const CarouselComp = () => {
     },
     {
       id: 'video-2',
-      src: '4evV8Fr5A8U',
+      src: 'dUiDZJMPh-s',
     },
     {
       id: 'video-3',
@@ -19,11 +21,21 @@ export const CarouselComp = () => {
     },
     {
       id: 'video-4',
-      src: 'dsK8SsfqdHE',
+      src: 'lpUjrMxBX2E',
     },
   ]);
   return (
-    <Carousel show={1} slide={2} transition={0.5}>
+    <Carousel
+      show={1}
+      slide={1}
+      transition={0.5}
+      leftArrow={
+        <div className="flex justify-center items-center">
+          <LeftIcon />
+        </div>
+      }
+      rightArrow={<RightIcon />}
+    >
       {videos.map((video) => (
         <VideoOne slider={video} key={video.id} />
       ))}
