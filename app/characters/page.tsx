@@ -23,7 +23,7 @@ export default async function Page() {
   };
 
   return (
-    <section className="grid w-11/12 grid-cols-1 gap-4 mx-auto sm:grid-cols-2 xl:grid-cols-3">
+    <section className="grid w-11/12 grid-cols-1 gap-x-16 gap-y-16 sm:grid-cols-2 xl:grid-cols-3 mx-auto pb-8">
       {/* // <section className="mt-12 pinterest-container"> */}
       {loading ? (
         <figure className="flex items-center justify-center w-full h-screen col-span-3">
