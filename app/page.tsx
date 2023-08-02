@@ -1,9 +1,8 @@
 'use client';
-
 import { Button } from '@nextui-org/react';
 import Link from 'next/link';
 import { Image } from '@nextui-org/react';
-import { CarouselComp } from './components/CarouselComp';
+import { Carousel } from './components/Carousel';
 
 export const metadata = {
   title: 'Black Clover / Home',
@@ -46,7 +45,7 @@ export default function Home() {
       </section>
 
       <div className="px-4 sm:px-22 lg:px-44 py-24">
-        <CarouselComp />
+        <Carousel />
       </div>
     </div>
   );
