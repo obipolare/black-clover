@@ -3,13 +3,12 @@ import { useState } from 'react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { Image } from '@nextui-org/react';
+import Hamburger from 'hamburger-react';
 
 const Header = () => {
-  const [show, setShow] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   const { setTheme, theme } = useTheme();
-  const changeClassToggle = () => {
-    setShow(!show);
-  };
+
   const menu = [
     {
       name: 'Home',
@@ -45,11 +44,15 @@ const Header = () => {
               />
             </Link>
           </figure>
+
+          <figure className="flex lg:hidden">
+            <Hamburger toggled={isOpen} toggle={setOpen} />
+          </figure>
         </div>
 
         <ul
           className={`lg:flex py-2 w-full lg:w-auto items-center ${
-            !show && 'hidden'
+            !isOpen ? 'hidden' : ''
           }`}
         >
           <div
@@ -68,7 +71,7 @@ const Header = () => {
                 stroke-linejoin="round"
                 stroke-width="2"
                 d={`${
-                  theme === 'light'
+                  theme === 'dark'
                     ? ' M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
                     : ' M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z '
                 }`}
@@ -76,18 +79,20 @@ const Header = () => {
             </svg>
           </div>
 
-          {menu.map(({ name, link, id }) => {
-            return (
-              <li className="flex" key={id}>
-                <Link
-                  href={link}
-                  className="flex-grow px-4 py-2 text-base font-semibold transition duration-200 rounded hover:text-green-700 dark:hover:text-green-300"
-                >
-                  {name}
-                </Link>
-              </li>
-            );
-          })}
+          <div className="flex flex-col lg:flex-row gap-6">
+            {menu.map(({ name, link, id }) => {
+              return (
+                <li className="flex" key={id}>
+                  <Link
+                    href={link}
+                    className="flex-1 text-base font-semibold transition duration-200 rounded hover:text-green-700 dark:hover:text-green-300"
+                  >
+                    {name}
+                  </Link>
+                </li>
+              );
+            })}
+          </div>
         </ul>
       </nav>
     </header>
